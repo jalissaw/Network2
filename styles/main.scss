@@ -16,67 +16,53 @@ header {
     height: 100vh;
     width: 100%;
     position: relative;
-
-    .video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        background-repeat: no-repeat;
-        // background-position: top;
-        background-size: cover;
-        z-index: -2;
-
-        .videobg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-repeat: no-repeat;
-            // background-position: top;
-            object-fit: cover;
-        }
-    }
+    background-attachment: fixed;
 
     .intro {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         height: 100%;
         width: 100%;
-        z-index: 2;
+    }
 
-        .statement {
-            margin-left: 30px;
-            font-family: Bungee;
-            font-size: 3em;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke: white;
-            -webkit-text-stroke-width: 0.5px;
-            color: white;
+    .introduction {
+        display: flex;
+        justify-content: center;
+        // align-items: flex-start;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        // background: rgb(65, 100, 139);
+        color: white;
+
+        .name {
+            color: rgb(65, 100, 139);
+            font-size: 3.5em;
+            font-weight: 400;
+            padding-left: 10px;
+            text-align: right;
         }
 
-            .name {
-                padding-left: 100px;
-                font-family: Bungee;
-                font-size: 2.6em;
-                color: rgb(98, 125, 161);
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke: rgb(77, 112, 144);
-                -webkit-text-stroke-width: 0.5px;
-            }
+        .title {
+            font-size: 2.5em;
+            padding: 10px;
+            color: white;
+            background: rgb(65, 100, 139);
+            font-weight: 400;
+        }
+    }
 
-            .title {
-                padding-left: 300px;
-                font-family: Bungee;
-                font-size: 2.2em;
-                color: rgb(77, 112, 144);
-                -webkit-text-fill-color: transparent;
-                -webkit-text-stroke: rgb(98, 125, 161);
-                -webkit-text-stroke-width: 0.5px;
-            }
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 50%;
+
+        .networkgif {
+            height: 60%;
+            width: 80%;
+        }
     }
 }
