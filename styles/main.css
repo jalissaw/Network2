@@ -41,8 +41,46 @@ main {
 
 .nav .links .link {
   color: #41648b;
-  margin: 0px 15px;
+  margin: 0px 10px;
+  padding: 10px;
   font-size: 1.3em;
+  position: relative;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.nav .links .link:hover::before {
+  -webkit-box-shadow: black 0px -8px 0.5px;
+          box-shadow: black 0px -8px 0.5px;
+}
+
+.nav .links .link:hover::after {
+  opacity: 0;
+}
+
+.nav .links .link:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 55px;
+  background: #41648b;
+  -webkit-transform: 0.3s ease-in;
+          transform: 0.3s ease-in;
+}
+
+.nav .links .link:nth-child(1)::before:hover {
+  -webkit-box-shadow: black 0px -8px 0.5px;
+          box-shadow: black 0px -8px 0.5px;
+}
+
+.nav .links .link:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 55px;
+  background: #506275;
+  left: 15%;
+  bottom: 13%;
 }
 
 * {
@@ -96,6 +134,7 @@ header .introduction .name {
   font-weight: 400;
   padding-left: 10px;
   text-align: right;
+  text-shadow: grey 2px 2px 2px;
 }
 
 header .introduction .title {

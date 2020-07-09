@@ -20,8 +20,42 @@
 
         .link {
             color: rgb(65, 100, 139);
-            margin: 0px 15px;
+            margin: 0px 10px;
+            padding: 10px;
             font-size: 1.3em;
+            position: relative;
+            transition: 0.3s ease-in;
+
+            &:hover::before {
+                box-shadow: black 0px -8px 0.5px;
+                
+              }
+              &:hover::after {
+                opacity: 0;
+              }
         }
+
+        .link:nth-child(1)::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 55px;
+            background: rgb(65, 100, 139);
+            transform: 0.3s ease-in;
+
+            &:hover {
+                box-shadow: black 0px -8px 0.5px;
+            }
+        }
+
+        .link:nth-child(1)::after {
+            content: '';
+          position: absolute;
+          height: 2px;
+          width: 55px;
+          background: rgb(80, 98, 117);
+          left: 15%;
+          bottom: 13%;
+      }
     }
 }
