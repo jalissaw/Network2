@@ -53,9 +53,17 @@
           position: absolute;
           height: 2px;
           width: 55px;
-          background: rgb(80, 98, 117);
+          background: $primary-color;
           left: 15%;
           bottom: 13%;
       }
+    }
+
+    .fas {
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        font-size: 1.7em;
+        color: $primary-color;
     }
 }

@@ -78,9 +78,17 @@ main {
   position: absolute;
   height: 2px;
   width: 55px;
-  background: #506275;
+  background: #41648b;
   left: 15%;
   bottom: 13%;
+}
+
+.nav .fas {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  font-size: 1.7em;
+  color: #41648b;
 }
 
 * {
@@ -131,14 +139,14 @@ header .introduction {
 header .introduction .name {
   color: #41648b;
   font-size: 3.5em;
-  font-weight: 400;
+  font-weight: 600;
   padding-left: 10px;
   text-align: right;
   text-shadow: grey 2px 2px 2px;
 }
 
 header .introduction .title {
-  font-size: 2.5em;
+  font-size: 2.3em;
   padding: 10px;
   color: white;
   background: #41648b;
@@ -160,7 +168,7 @@ header .video {
 }
 
 header .video .networkgif {
-  height: 60%;
+  height: 70%;
   width: 80%;
 }
 /*# sourceMappingURL=main.css.map */

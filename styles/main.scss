@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Monda&family=Nanum+Myeongjo:wght@700&family=Noticia+Text&family=Noto+Sans+TC&display=swap');
 @import 'content';
 @import 'nav';
+@import 'variables';
 
 * {
     margin: 0;
@@ -37,19 +38,19 @@ header {
         color: white;
 
         .name {
-            color: rgb(65, 100, 139);
+            color: $primary-color;
             font-size: 3.5em;
-            font-weight: 400;
+            font-weight: 600;
             padding-left: 10px;
             text-align: right;
             text-shadow: grey 2px 2px 2px;
         }
 
         .title {
-            font-size: 2.5em;
+            font-size: 2.3em;
             padding: 10px;
             color: white;
-            background: rgb(65, 100, 139);
+            background: $primary-color;
             font-weight: 400;
         }
     }
@@ -62,7 +63,7 @@ header {
         width: 50%;
 
         .networkgif {
-            height: 60%;
+            height: 70%;
             width: 80%;
         }
     }
