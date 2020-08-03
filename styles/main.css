@@ -106,6 +106,10 @@ header {
   background-attachment: fixed;
 }
 
+header .svg {
+  position: absolute;
+}
+
 header .intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -165,10 +169,5 @@ header .video {
           align-items: center;
   height: 100%;
   width: 50%;
-}
-
-header .video .networkgif {
-  height: 70%;
-  width: 80%;
 }
 /*# sourceMappingURL=main.css.map */
