@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&family=Fjalla+One&family=Hammersmith+One&family=Khula&family=Mitr:wght@300&family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Noto+Sans&family=Oxygen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Monda&family=Nanum+Myeongjo:wght@700&family=Noticia+Text&family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 @import 'content';
 @import 'nav';
 @import 'variables';
@@ -9,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Monda;
+    font-family: Concert One, Monda;
 }
 
 
@@ -18,20 +19,15 @@ header {
     width: 100%;
     position: relative;
     background-attachment: fixed;
-    // background: url('../server.svg');
-    // background-size: cover;
-    // background-repeat: no-repeat;
-
-    .svg {
-        position: absolute;
-    }
 
     .intro {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100%;
         width: 100%;
+        position: relative;
     }
 
     .introduction {
@@ -40,7 +36,6 @@ header {
         // align-items: flex-start;
         flex-direction: column;
         height: 100%;
-        width: 50%;
         // background: rgb(65, 100, 139);
         color: white;
 
@@ -54,10 +49,9 @@ header {
         }
 
         .title {
-            font-size: 2.3em;
+            font-size: 2.5em;
             padding: 10px;
-            color: white;
-            background: $primary-color;
+            color: $primary-color;
             font-weight: 400;
         }
     }
@@ -67,11 +61,14 @@ header {
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 50%;
-
-        // .networkgif {
-        //     height: 50%;
-        //     width: 80%;
-        // }
+        width: 100%;
+        position: absolute;
+        top: 0;        
+        
+        .svg {
+            position: absolute;
+            width: 700px;
+            bottom: -70px;
+        }
     }
 }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&family=Fjalla+One&family=Hammersmith+One&family=Khula&family=Mitr:wght@300&family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Noto+Sans&family=Oxygen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Monda&family=Nanum+Myeongjo:wght@700&family=Noticia+Text&family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 main {
   height: 100vh;
   width: 100%;
@@ -40,7 +41,7 @@ main {
 }
 
 .nav .links .link {
-  color: #41648b;
+  color: #4C49EC;
   margin: 0px 10px;
   padding: 10px;
   font-size: 1.3em;
@@ -58,37 +59,12 @@ main {
   opacity: 0;
 }
 
-.nav .links .link:nth-child(1)::before {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 55px;
-  background: #41648b;
-  -webkit-transform: 0.3s ease-in;
-          transform: 0.3s ease-in;
-}
-
-.nav .links .link:nth-child(1)::before:hover {
-  -webkit-box-shadow: black 0px -8px 0.5px;
-          box-shadow: black 0px -8px 0.5px;
-}
-
-.nav .links .link:nth-child(1)::after {
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 55px;
-  background: #41648b;
-  left: 15%;
-  bottom: 13%;
-}
-
 .nav .fas {
   position: absolute;
   left: 40px;
   top: 40px;
   font-size: 1.7em;
-  color: #41648b;
+  color: #4C49EC;
 }
 
 * {
@@ -96,7 +72,7 @@ main {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Monda;
+  font-family: Concert One, Monda;
 }
 
 header {
@@ -106,14 +82,14 @@ header {
   background-attachment: fixed;
 }
 
-header .svg {
-  position: absolute;
-}
-
 header .intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -122,6 +98,7 @@ header .intro {
           align-items: center;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 header .introduction {
@@ -136,12 +113,11 @@ header .introduction {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  width: 50%;
   color: white;
 }
 
 header .introduction .name {
-  color: #41648b;
+  color: #4C49EC;
   font-size: 3.5em;
   font-weight: 600;
   padding-left: 10px;
@@ -150,10 +126,9 @@ header .introduction .name {
 }
 
 header .introduction .title {
-  font-size: 2.3em;
+  font-size: 2.5em;
   padding: 10px;
-  color: white;
-  background: #41648b;
+  color: #4C49EC;
   font-weight: 400;
 }
 
@@ -168,6 +143,14 @@ header .video {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 50%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+header .video .svg {
+  position: absolute;
+  width: 700px;
+  bottom: -70px;
 }
 /*# sourceMappingURL=main.css.map */
