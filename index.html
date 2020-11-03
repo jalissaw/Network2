@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js">
     <link rel="stylesheet" href="styles/main.css">
     <title>Justina Williams</title>
 </head>
 
-<body>
+<body data-barba="wrapper">
 
-    <header>
+    <header data-barba="container" data-barba-namespace="home">
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg">
             <path fill="rgb(65, 100, 139)" fill-opacity="1"
                 d="M0,160L40,160C80,160,160,160,240,165.3C320,171,400,181,480,197.3C560,213,640,235,720,250.7C800,267,880,277,960,245.3C1040,213,1120,139,1200,112C1280,85,1360,107,1400,117.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
@@ -101,8 +102,8 @@
         </div>
         <nav class="nav">
             <ul class="links">
-                <li class="link">home</li>
-                <li class="link">about</li>
+                <li class="link"><a href="index.html">home</a></li>
+                <li class="link"><a href="about.html">about</a></li>
                 <li class="link">projects</li>
                 <li class="link">contact</li>
             </ul>
@@ -110,9 +111,7 @@
         </nav>
     </header>
 
-    <main>
-        <p>Hello, connect with me. I am a network engineer that specialise in security </p>
-    </main>
+    <script src="https://unpkg.com/@barba/core"></script>
 
 </body>
 
