@@ -2,15 +2,12 @@
 barba.init({
     transitions: [{
         name: 'opacity-transition',
+        namespace: ['home'],
         leave(data) {
-            return gsap.to(data.current.container, {
-                opacity: 0
-            });
+            gsap.to(data.container, { rotation: 0, x: 0, duration: 1 })
         },
         enter(data) {
-            return gsap.from(data.next.container, {
-                opacity: 0
-            });
+            gsap.to(data.next.container, { rotation: 27, x: 100, duration: 1 })
         }
     }]
 });
