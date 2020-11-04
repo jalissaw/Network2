@@ -1,13 +1,31 @@
+//gsap 
+
+
+const animateLeave = (container) => {
+    return gsap.to(container, {
+        alpha: 0,
+        x: 50
+
+    })
+}
+
+const animateEnter = (container) => {
+    return gsap.from(container, {
+        alpha: 0,
+        x: -100,
+        duration: 0.5,
+        ease: 'none',
+    })
+}
+
 
 barba.init({
     transitions: [{
         name: 'opacity-transition',
-        namespace: ['home'],
-        leave(data) {
-            gsap.to(data.container, { rotation: 0, x: 0, duration: 1 })
-        },
+        leave: (data) => animateLeave(data.current.container),
         enter(data) {
-            gsap.to(data.next.container, { rotation: 27, x: 100, duration: 1 })
+
+            animateEnter(data.next.container)
         }
     }]
 });
