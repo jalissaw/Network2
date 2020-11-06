@@ -1,20 +1,18 @@
 //gsap 
 
 
-const animateLeave = (container) => {
-    return gsap.to(container, {
-        alpha: 0,
-        x: 50
 
-    })
+const animateLeave = (container) => {
+    return gsap.from('.load-page', { alpha: 0 })
 }
 
 const animateEnter = (container) => {
-    return gsap.from(container, {
-        alpha: 0,
-        x: -100,
-        duration: 0.5,
-        ease: 'none',
+    return gsap.to('.load-page', {
+        alpha: 1,
+        width: '100%',
+        background: '#4C49EC',
+        duration: 1,
+        top: 54
     })
 }
 
@@ -22,10 +20,10 @@ const animateEnter = (container) => {
 barba.init({
     transitions: [{
         name: 'opacity-transition',
-        leave: (data) => animateLeave(data.current.container),
+        leave: (data) => animateLeave(),
         enter(data) {
 
-            animateEnter(data.next.container)
+            animateEnter()
         }
     }]
 });
