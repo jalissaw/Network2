@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 30px 20px 0px 20px;
     z-index: 2;
     // background: rgb(65, 100, 139);
 
@@ -22,9 +22,10 @@
             color: #4C49EC;
             margin: 0px 10px;
             padding: 10px;
-            font-size: 1.3em;
+            font-size: 1.5rem;
             position: relative;
             transition: 0.3s ease-in;
+            text-decoration: none;
 
             &:hover::before {
                 box-shadow: black 0px -8px 0.5px;
@@ -33,6 +34,11 @@
               &:hover::after {
                 opacity: 0;
               }
+        }
+
+        a {
+            text-decoration: none;
+            color: #4C49EC;
         }
 
         // .link:nth-child(1)::before {
@@ -61,8 +67,7 @@
 
     .fas {
         position: absolute;
-        left: 40px;
-        top: 40px;
+        left: 60px;
         font-size: 1.7em;
         color: #4C49EC;
     }
