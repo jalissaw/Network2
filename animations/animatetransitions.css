@@ -8,15 +8,18 @@
     left: 0;
     z-index: 10;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .load-page {
     height: 100%;
-    width: 0%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background: darkblue;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%);
     z-index: 10;
     pointer-events: none;
 }
