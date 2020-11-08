@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Noto+Sans&family=Oxygen&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Monda&family=Nanum+Myeongjo:wght@700&family=Noticia+Text&family=Noto+Sans+TC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Dosis:wght@300&family=Xanh+Mono&display=swap');
 @import 'content';
 @import 'nav';
 @import 'variables';
@@ -10,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Concert One, Monda;
+    font-family: Dosis, Almarai, Concert One, Monda;
 }
 
 
@@ -33,26 +34,34 @@ header {
     .introduction {
         display: flex;
         justify-content: center;
-        // align-items: flex-start;
+        align-items: flex-start;
         flex-direction: column;
         height: 100%;
         // background: rgb(65, 100, 139);
         color: white;
 
         .name {
-            color: $primary-color;
+            color: white;
             font-size: 3.5em;
             font-weight: 600;
-            padding-left: 10px;
             text-align: right;
             text-shadow: grey 2px 2px 2px;
         }
 
         .title {
             font-size: 2.5em;
-            padding: 10px;
             color: $primary-color;
             font-weight: 400;
+            padding-top: 25px;
+            padding-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        .info-paragraph {
+            width: 40%;
+            color: black;
+            line-height: 25px;
+            
         }
     }
 
@@ -61,9 +70,10 @@ header {
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 100%;
+        width: 50%;
         position: absolute;
-        top: 0;        
+        top: 0;
+        right: 0;        
         
         .background {
             width: 100%;
