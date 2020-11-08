@@ -34,16 +34,21 @@ const animateLeave = (container) => {
             ease: "Expo.easeInOut"
         })
         .set('.load-page', { left: "-100%" })
+        .to('.introduction', { opacity: 1, y: 0 })
     return tl
 
 }
 
 const animateEnter = (container) => {
-    return gsap.to('h1', {
-        opacity: 1,
-        y: 20,
-
+    const tl = gsap.timeline()
+    tl.to('.introduction', {
+        opacity: 0,
+        y: 40,
+    }).from('.background', {
+        xPercent: 50
     })
+
+    return tl
 }
 
 
@@ -59,10 +64,6 @@ barba.init({
         },
         async enter(data) {
 
-            animateEnter()
-        },
-
-        once() {
             animateEnter()
         }
     }]
