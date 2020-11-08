@@ -8,50 +8,59 @@ const animateLinks = () => {
     })
 }
 
+function delay(n) {
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+}
+
 const animateLeave = (container) => {
-    console.log('leaving')
+    const tl = gsap.timeline()
+    tl.to('.load-page', {
+        background: '#4C49EC',
+        width: "100%",
+        left: "0%",
+        duration: 1.2,
+        ease: "Expo.easeInOut"
+    })
+        .to('.load-page', {
+            background: '#4C49EC',
+            width: "100%",
+            left: "100%",
+            duration: 1,
+            delay: 0.3,
+            ease: "Expo.easeInOut"
+        })
+        .set('.load-page', { left: "-100%" })
+        .to('h1', {
+            opacity: 1,
+            y: 20,
+
+        })
+    return tl
 
 }
 
 const animateEnter = (container) => {
-    const tl = gsap.timeline()
-    return (
-        tl.to('.load-page', {
-            background: '#4C49EC',
-            width: "100%",
-            left: "0%",
-            duration: 1.2,
-            ease: "Expo.easeInOut"
-        })
-            .to('.load-page', {
-                background: '#4C49EC',
-                width: "100%",
-                left: "100%",
-                duration: 1,
-                delay: 0.3,
-                ease: "Expo.easeInOut"
-            })
-            .set('.load-page', { left: "-100%" })
-            .to('h1', {
-                opacity: 1,
-                y: 20,
-
-            })
-    )
+    console.log(container)
 }
 
 
 barba.init({
     transitions: [{
         name: 'opacity-transition',
-        leave: (data) => animateLeave(),
-        enter(data) {
+        sync: true,
+        async leave(data) {
+            const done = this.async()
+            animateLeave()
+            await delay(1200)
+            done()
+        },
+        async enter(data) {
 
             animateEnter()
-        },
-
-        beforeOnce() {
-            // animateLinks()
         }
     }]
 });
