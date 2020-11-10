@@ -34,7 +34,7 @@ const animateLeave = (container) => {
             ease: "Expo.easeInOut"
         })
         .set('.load-page', { left: "-100%" })
-        .to('.animate-index', { opacity: 1, y: 0, stagger: 0.2 })
+        .to('.animate-index', { opacity: 1, y: 0, stagger: 0.2 }, "-=1")
     return tl
 
 }
