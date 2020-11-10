@@ -173,3 +173,94 @@ header {
         }
     }
 }
+
+//projects 
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-left: 100px;
+
+    .project-heading {
+        color: white;
+        font-size: 4.5rem;
+        font-weight: 600;
+        text-align: right;
+        text-shadow: grey 2px 2px 2px;
+    }
+
+    .info-project {
+        width:  60%;
+        font-size: 1.3rem;
+        // color: $primary-color;
+    }
+
+}
+
+.main-project{
+    width: 100%;
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 500px;
+        height: 400px;
+        background: $primary-color;
+
+        .titled-project {
+            font-size: 3rem;
+            color: white;
+            text-transform: uppercase;
+            padding: 5px;
+            font-weight: 100;
+            border-bottom: 2px solid rgb(19, 19, 19);
+        }
+
+        .network-used {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                padding: 10px;
+                margin: 10px;
+                border: solid white 2px;
+            }
+        }
+    }
+
+    .project-description-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 700px;
+       
+        .project-description {
+            width: 80%;
+            padding: 30px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.project-two {
+        
+    .project-info {
+        background: transparent;
+        color: $primary-color;
+        height: 200px;
+
+        .titled-project {
+            color: $primary-color;
+        
+        }
+    }
+}

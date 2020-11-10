@@ -239,4 +239,125 @@ header .img-background-container .background {
   font-size: 2rem;
   font-weight: 100;
 }
+
+.project-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding-left: 100px;
+}
+
+.project-title .project-heading {
+  color: white;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-align: right;
+  text-shadow: grey 2px 2px 2px;
+}
+
+.project-title .info-project {
+  width: 60%;
+  font-size: 1.3rem;
+}
+
+.main-project {
+  width: 100%;
+}
+
+.main-project .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 500px;
+          flex: 1 1 500px;
+  height: 400px;
+  background: #4C49EC;
+}
+
+.main-project .project-info .titled-project {
+  font-size: 3rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: 100;
+  border-bottom: 2px solid #131313;
+}
+
+.main-project .project-info .network-used {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-project .project-info .network-used h3 {
+  padding: 10px;
+  margin: 10px;
+  border: solid white 2px;
+}
+
+.main-project .project-description-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 700px;
+          flex: 1 1 700px;
+}
+
+.main-project .project-description-container .project-description {
+  width: 80%;
+  padding: 30px;
+  font-size: 1.2rem;
+}
+
+.project-two .project-info {
+  background: transparent;
+  color: #4C49EC;
+  height: 200px;
+}
+
+.project-two .project-info .titled-project {
+  color: #4C49EC;
+}
 /*# sourceMappingURL=main.css.map */
