@@ -17,8 +17,9 @@
     position: absolute;
     top: 0;
     left: -100%;
+    overflow: hidden;
     background: '#4C49EC';
     /* transform: translateX(-100%); */
     z-index: 10;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
