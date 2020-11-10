@@ -1,86 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&family=Fjalla+One&family=Hammersmith+One&family=Khula&family=Mitr:wght@300&family=Russo+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Francois+One&family=Noto+Sans&family=Oxygen&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Monda&family=Nanum+Myeongjo:wght@700&family=Noticia+Text&family=Noto+Sans+TC&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Almarai&family=Dosis:wght@300&family=Xanh+Mono&display=swap");
-main {
-  height: 100vh;
-  width: 100%;
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 20px 0px 20px;
-  z-index: 2;
-}
-
-.nav .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style-type: none;
-  width: 100%;
-  margin-right: 70px;
-}
-
-.nav .links .link {
-  color: #4C49EC;
-  margin: 0px 10px;
-  padding: 10px;
-  font-size: 1.5rem;
-  position: relative;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-  text-decoration: none;
-}
-
-.nav .links .link:hover::before {
-  -webkit-box-shadow: black 0px -8px 0.5px;
-          box-shadow: black 0px -8px 0.5px;
-}
-
-.nav .links .link:hover::after {
-  opacity: 0;
-}
-
-.nav .links a {
-  text-decoration: none;
-  color: #4C49EC;
-}
-
-.nav .fas {
-  position: absolute;
-  left: 60px;
-  font-size: 1.7em;
-  color: #4C49EC;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: Dosis, Almarai, Concert One, Monda;
-}
-
 header {
   height: 100vh;
   width: 100%;
@@ -128,7 +45,7 @@ header .introduction {
 
 header .introduction .name {
   color: white;
-  font-size: 3.5em;
+  font-size: 4rem;
   font-weight: 600;
   text-align: right;
   text-shadow: grey 2px 2px 2px;
@@ -172,5 +89,37 @@ header .img-background-container .background {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+
+.about-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding-left: 100px;
+}
+
+.about-title .about-heading {
+  color: white;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: right;
+  text-shadow: grey 2px 2px 2px;
+}
+
+.about-title .info-about {
+  width: 60%;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -34,18 +34,17 @@ const animateLeave = (container) => {
             ease: "Expo.easeInOut"
         })
         .set('.load-page', { left: "-100%" })
-        .to('.introduction', { opacity: 1, y: 0 })
+        .to('.animate-index', { opacity: 1, y: 0, stagger: 0.2 })
     return tl
 
 }
 
 const animateEnter = (container) => {
     const tl = gsap.timeline()
-    tl.to('.introduction', {
+    tl.to('.animate-index', {
         opacity: 0,
         y: 40,
-    }).from('.background', {
-        xPercent: 50
+        stagger: 0.2
     })
 
     return tl

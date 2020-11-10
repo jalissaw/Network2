@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&family=Fjalla+One&family=Hammersmith+One&family=Khula&family=Mitr:wght@300&family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Noto+Sans&family=Oxygen&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Monda&family=Nanum+Myeongjo:wght@700&family=Noticia+Text&family=Noto+Sans+TC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Dosis:wght@300&family=Xanh+Mono&display=swap');
-@import 'content';
-@import 'nav';
 @import 'variables';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Dosis, Almarai, Concert One, Monda;
-}
 
 
 header {
@@ -43,7 +29,7 @@ header {
 
         .name {
             color: white;
-            font-size: 3.5em;
+            font-size: 4rem;
             font-weight: 600;
             text-align: right;
             text-shadow: grey 2px 2px 2px;
@@ -82,5 +68,31 @@ header {
             object-fit: cover;
             z-index: -1;
         }
+    }
+}
+
+//about section css 
+
+.about-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    padding-left: 100px;
+
+    .about-heading {
+        color: white;
+        font-size: 4rem;
+        font-weight: 600;
+        text-align: right;
+        text-shadow: grey 2px 2px 2px;
+    }
+
+    .info-about {
+        width:  60%;
+        font-size: 1.3rem;
+        // color: $primary-color;
     }
 }
