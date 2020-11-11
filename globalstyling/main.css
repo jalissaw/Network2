@@ -48,6 +48,7 @@
   position: relative;
   -webkit-transform: ease 0.4s;
           transform: ease 0.4s;
+  z-index: 1;
 }
 
 .nav .links .link:before {
@@ -62,6 +63,7 @@
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
   border-bottom: 1px solid #4C49EC;
+  z-index: -1;
 }
 
 .nav .links .link:hover::before {

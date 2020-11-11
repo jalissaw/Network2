@@ -30,6 +30,7 @@
             text-decoration: none;
             position: relative;
             transform: ease 0.4s ;
+            z-index: 1;
 
             &:before {
                 content: '';
@@ -41,6 +42,7 @@
                 transform-origin: left;
                 transition: ease 0.4s;
                 border-bottom: 1px solid $primary-color;
+                z-index: -1;
             }
 
             &:hover::before {
