@@ -360,4 +360,171 @@ header .img-background-container .background {
 .project-two .project-info .titled-project {
   color: #4C49EC;
 }
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact-container .contact-introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 500px;
+          flex: 1 1 500px;
+  padding-left: 100px;
+}
+
+.contact-container .contact-introduction .contact-title {
+  color: white;
+  font-size: 5.5rem;
+  font-weight: 600;
+  text-shadow: grey 2px 2px 2px;
+}
+
+.contact-container .contact-introduction .contact-saying {
+  font-size: 2.7rem;
+  color: #4C49EC;
+  font-weight: 400;
+}
+
+.contact-container .contact-introduction .contact-info {
+  width: 80%;
+  line-height: 25px;
+  font-size: 1.1rem;
+}
+
+.contact-container .contact-introduction .fab {
+  color: #4C49EC;
+  margin-top: 15px;
+  font-size: 30px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.contact-container .contact-introduction .fab:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.contact-container .contact-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
+
+.contact-container .contact-form-container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 50px;
+}
+
+.contact-container .contact-form-container .form .input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid #4C49EC;
+}
+
+.contact-container .contact-form-container .form input[type='email'] {
+  margin: 12px 0px;
+}
+
+.contact-container .contact-form-container .form ::-webkit-input-placeholder {
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-container .contact-form-container .form :-ms-input-placeholder {
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-container .contact-form-container .form ::-ms-input-placeholder {
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-container .contact-form-container .form ::placeholder {
+  padding-left: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-container .contact-form-container .form .message {
+  width: 400px;
+  height: 175px;
+  resize: vertical;
+  border: none;
+  border: 1px solid #4C49EC;
+}
+
+.contact-container .contact-form-container .form .btn {
+  width: 100px;
+  height: 40px;
+  background: #4C49EC;
+  border: none;
+  outline: none;
+  color: white;
+  margin-top: 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.contact-container .contact-form-container .form .btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  z-index: -1;
+}
+
+.contact-container .contact-form-container .form .btn:hover::before {
+  background: #1f1be7;
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

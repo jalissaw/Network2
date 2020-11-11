@@ -264,3 +264,122 @@ header {
         }
     }
 }
+
+//contact 
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+
+    .contact-introduction {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 500px;
+        padding-left: 100px;
+
+        .contact-title {
+            color: white;
+            font-size: 5.5rem;
+            font-weight: 600;
+            text-shadow: grey 2px 2px 2px;
+        }
+
+        .contact-saying {
+            font-size: 2.7rem;
+            color: $primary-color;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            width: 80%;
+            line-height: 25px;
+            font-size: 1.1rem;
+        }
+
+        .fab {
+            color: $primary-color;
+            margin-top: 15px;
+            font-size: 30px;
+            transition: ease 0.3s ;
+
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    .contact-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 300px;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 50px;
+
+            .input {
+                width: 400px;
+                height: 40px;
+                border: 1px solid $primary-color;
+            }
+
+            input[type='email'] {
+                margin: 12px 0px;
+            }
+
+            ::placeholder {
+                padding-left: 10px;
+                font-size: 1.2rem;
+            }
+
+            .message {
+                width: 400px;
+                height: 175px;
+                resize: vertical;
+                border: none;
+                border: 1px solid $primary-color;
+            }
+
+            .btn {
+                width: 100px;
+                height: 40px;
+                background: $primary-color;
+                border: none;
+                outline: none;
+                color: white;
+                margin-top: 12px;
+                font-size: 1rem;
+                text-transform: uppercase;
+                position: relative;
+                cursor: pointer;
+                z-index: 1;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 40px;
+                    width: 0;
+                    transform-origin: left;
+                    transition: ease 0.4s;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    background: darken($color: $primary-color, $amount: 10px);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

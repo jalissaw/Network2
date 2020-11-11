@@ -45,15 +45,28 @@
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
   text-decoration: none;
+  position: relative;
+  -webkit-transform: ease 0.4s;
+          transform: ease 0.4s;
+}
+
+.nav .links .link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  height: 40px;
+  width: 0px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+  border-bottom: 1px solid #4C49EC;
 }
 
 .nav .links .link:hover::before {
-  -webkit-box-shadow: black 0px -8px 0.5px;
-          box-shadow: black 0px -8px 0.5px;
-}
-
-.nav .links .link:hover::after {
-  opacity: 0;
+  cursor: pointer;
+  width: 30px;
 }
 
 .nav .links a {

@@ -26,13 +26,13 @@ const animateLeave = () => {
             ease: "Expo.easeInOut"
         })
         .set('.load-page', { left: "-100%" })
-        .to('.animate-index',
+        .to(['.animate-index'],
             {
                 opacity: 1,
                 y: 0,
                 stagger: 0.2
             },
-            "-=1");
+            "-=1")
     return tl
 
 }
@@ -43,12 +43,18 @@ const animateEnter = () => {
         opacity: 0,
         y: 40,
         stagger: 0.2
-    })
+    });
 
     tl.from(['.certs'], {
         opacity: 0,
         stagger: 0.2,
         delay: 0.7
+    });
+
+    tl.from('.animate-in', {
+        opacity: 0,
+        x: 50,
+        stagger: 0.2
     })
 
     return tl

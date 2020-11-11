@@ -23,3 +23,8 @@
     z-index: 10;
     pointer-events: none;
 }
+
+/* .animate-in {
+    opacity: 0;
+    transform: translateX(20px);
+} */
