@@ -81,6 +81,15 @@
   left: 100px;
   font-size: 1.7em;
   color: #4C49EC;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.nav .fas:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: #1f1be7;
 }
 
 * {

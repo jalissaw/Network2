@@ -63,5 +63,12 @@
         left: 100px;
         font-size: 1.7em;
         color: $primary-color;
+        transition: ease 0.4s ;
+
+        &:hover {
+            cursor: pointer;
+            transform: rotate(90deg);
+            color: darken($color: $primary-color, $amount: 10px);
+        }
     }
 }
