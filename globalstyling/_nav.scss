@@ -32,6 +32,10 @@
             transform: ease 0.4s ;
             z-index: 1;
 
+            @media #{$navgone} {
+                display: none;
+            }
+
             &:before {
                 content: '';
                 position: absolute;

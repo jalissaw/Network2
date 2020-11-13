@@ -51,6 +51,12 @@
   z-index: 1;
 }
 
+@media (max-width: 650px) {
+  .nav .links .link {
+    display: none;
+  }
+}
+
 .nav .links .link:before {
   content: '';
   position: absolute;
