@@ -375,6 +375,7 @@ header {
                     z-index: -1;
                 }
 
+                
                 &:hover::before {
                     background: darken($color: $primary-color, $amount: 10px);
                     width: 100%;
