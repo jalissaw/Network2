@@ -67,7 +67,8 @@
         left: 100px;
         font-size: 1.7em;
         color: $primary-color;
-        transition: ease 0.4s ;
+        transition: ease 0.4s;
+        z-index: 10;
 
         &:hover {
             cursor: pointer;
@@ -75,4 +76,57 @@
             color: darken($color: $primary-color, $amount: 10px);
         }
     }
+}
+
+// Menu Nav
+
+.show-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 0;
+    // pointer-events: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: translateY(-100%);
+    z-index: 10;
+    transition: ease 0.4s;
+
+    &.menu-appear {
+        transform: translateY(0%);
+        opacity: 1;
+        // pointer-events: all;
+    }
+
+
+
+    
+    .show-links {
+        list-style-type: none;
+
+        .show-link {
+            margin: 0px 10px;
+            padding: 10px;
+            position: relative;
+            transition: ease-in 0.8s;
+
+            &:hover::first-letter {
+                color: $primary-color;
+                text-shadow: $primary-color 125px 10px 15px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 600;
+                font-size: 2.4rem;
+                text-shadow: grey 2px 2px 2px;
+            }
+        }
+    }
+
 }

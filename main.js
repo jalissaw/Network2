@@ -1,3 +1,21 @@
+// menu js
+
+const showNav = document.querySelector('.show-nav');
+const icon = document.querySelector('.fas');
+const showLink = document.querySelectorAll('.show-link a');
+
+
+icon.addEventListener('click', () => {
+    console.log('clicked')
+    showNav.classList.toggle("menu-appear");
+});
+
+// showLink.forEach(link => link.addEventListener('click'), () => {
+//     showNav.classList.remove('.menu-appear')
+// });
+
+
+
 //gsap 
 
 function delay(n) {
@@ -77,3 +95,4 @@ barba.init({
         }
     }]
 });
+

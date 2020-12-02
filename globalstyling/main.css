@@ -89,6 +89,7 @@
   color: #4C49EC;
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
+  z-index: 10;
 }
 
 .nav .fas:hover {
@@ -96,6 +97,61 @@
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   color: #1f1be7;
+}
+
+.show-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  opacity: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 10;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.show-nav.menu-appear {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+}
+
+.show-nav .show-links {
+  list-style-type: none;
+}
+
+.show-nav .show-links .show-link {
+  margin: 0px 10px;
+  padding: 10px;
+  position: relative;
+  -webkit-transition: ease-in 0.8s;
+  transition: ease-in 0.8s;
+}
+
+.show-nav .show-links .show-link:hover::first-letter {
+  color: #4C49EC;
+  text-shadow: #4C49EC 125px 10px 15px;
+}
+
+.show-nav .show-links .show-link a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-shadow: grey 2px 2px 2px;
 }
 
 * {
