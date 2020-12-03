@@ -5,10 +5,14 @@ const icon = document.querySelector('.fas');
 const showLink = document.querySelectorAll('.show-link a');
 
 
-icon.addEventListener('click', () => {
-    console.log('clicked')
-    showNav.classList.toggle("menu-appear");
-});
+function toggleMenu() {
+    icon.addEventListener('click', () => {
+        console.log('clicked')
+        showNav.classList.toggle("menu-appear");
+    });
+}
+
+toggleMenu()
 
 // showLink.forEach(link => link.addEventListener('click'), () => {
 //     showNav.classList.remove('.menu-appear')
@@ -95,4 +99,3 @@ barba.init({
         }
     }]
 });
-
