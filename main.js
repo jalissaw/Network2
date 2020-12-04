@@ -84,21 +84,21 @@ const animateEnter = () => {
 }
 
 
-// barba.init({
+barba.init({
 
-//     transitions: [{
-//         sync: true,
-//         async leave(data) {
-//             const done = this.async();
+    transitions: [{
+        sync: true,
+        async leave(data) {
+            const done = this.async();
 
 
-//             animateLeave();
-//             await delay(1100);
-//             done();
-//         },
-//         async enter(data) {
+            animateLeave();
+            await delay(1100);
+            done();
+        },
+        async enter(data) {
 
-//             animateEnter()
-//         }
-//     }]
-// });
+            animateEnter()
+        }
+    }]
+});
