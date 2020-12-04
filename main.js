@@ -23,6 +23,7 @@ toggleMenu()
 //gsap 
 
 function delay(n) {
+    n = n || 2000;
     return new Promise((done) => {
         setTimeout(() => {
             done();
@@ -83,19 +84,21 @@ const animateEnter = () => {
 }
 
 
-barba.init({
+// barba.init({
 
-    transitions: [{
-        sync: true,
-        async leave(data) {
-            const done = this.async();
-            animateLeave();
-            await delay(1200);
-            done();
-        },
-        async enter(data) {
+//     transitions: [{
+//         sync: true,
+//         async leave(data) {
+//             const done = this.async();
 
-            animateEnter()
-        }
-    }]
-});
+
+//             animateLeave();
+//             await delay(1100);
+//             done();
+//         },
+//         async enter(data) {
+
+//             animateEnter()
+//         }
+//     }]
+// });
