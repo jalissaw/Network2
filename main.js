@@ -22,15 +22,6 @@ toggleMenu()
 
 //gsap 
 
-function delay(n) {
-    n = n || 2000;
-    return new Promise((done) => {
-        setTimeout(() => {
-            done();
-        }, n);
-    });
-}
-
 const animateLeave = () => {
     const tl = gsap.timeline()
     tl.to('.load-page', {
@@ -83,6 +74,15 @@ const animateEnter = () => {
     return tl
 }
 
+function delay(n) {
+    n = n || 2000;
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+}
+
 
 barba.init({
 
@@ -93,7 +93,7 @@ barba.init({
 
 
             animateLeave();
-            await delay(1100);
+            await delay(1500);
             done();
         },
         async enter(data) {
