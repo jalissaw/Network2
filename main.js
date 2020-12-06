@@ -3,11 +3,21 @@
 const showNav = document.querySelector('.show-nav');
 const icon = document.querySelector('.fas');
 const showLink = document.querySelectorAll('.show-link a');
+var links = document.querySelectorAll('a[href]');
 
+var cbk = function (e) {
+    if (e.currentTarget.href === window.location.href) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+};
+
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', cbk);
+}
 
 function toggleMenu() {
     icon.addEventListener('click', () => {
-        console.log('clicked')
         showNav.classList.toggle("menu-appear");
     });
 }
@@ -59,28 +69,30 @@ const animateEnter = () => {
         stagger: 0.2
     });
 
-    tl.from(['.certs'], {
-        opacity: 0,
-        stagger: 0.2,
-        delay: 0.7
-    });
+    // tl.from(['.certs'], {
+    //     opacity: 0,
+    //     stagger: 0.2,
+    //     delay: 0.7
+    // });
 
-    tl.from('.animate-in', {
-        opacity: 0,
-        x: 50,
-        stagger: 0.2
-    })
+    // tl.from('.animate-in', {
+    //     opacity: 0,
+    //     x: 50,
+    //     stagger: 0.2
+    // })
 
     return tl
 }
 
 function delay(n) {
     n = n || 2000;
+
     return new Promise((done) => {
         setTimeout(() => {
             done();
         }, n);
     });
+
 }
 
 
@@ -93,12 +105,14 @@ barba.init({
 
 
             animateLeave();
-            await delay(1500);
+            await delay(1200);
             done();
+            // location.reload()
         },
         async enter(data) {
-
-            animateEnter()
+            const done = this.async();
+            await animateEnter()
+            done();
         }
     }]
 });
