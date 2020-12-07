@@ -21,12 +21,14 @@ function toggleMenu() {
         showNav.classList.toggle("menu-appear");
     });
 }
+toggleMenu()
 
 
 // showLink.forEach(link => link.addEventListener('click'), () => {
-//     showNav.classList.remove('.menu-appear')
+//     if (showNav) {
+//         showNav.classList.remove('.menu-appear');
+//     }
 // });
-
 
 
 //gsap 
@@ -94,21 +96,6 @@ function delay(n) {
 
 }
 
-barba.hooks.after((data) => {
-    // this hook will be called during every transitions
-    // before new page content enter…
-
-    function toggleMenu() {
-        icon.addEventListener('click', () => {
-            showNav.classList.toggle("menu-appear");
-        });
-    }
-
-
-    toggleMenu()
-});
-
-
 barba.init({
     preventRunning: true,
     prevent: ({ el }) => el.classList && el.classList.contains('prevent'),
@@ -127,14 +114,6 @@ barba.init({
 
             animateEnter()
 
-        },
-        async after() {
-            function toggleMenu() {
-                icon.addEventListener('click', () => {
-                    showNav.classList.toggle("menu-appear");
-                });
-            }
-            toggleMenu()
         }
     }]
 });
