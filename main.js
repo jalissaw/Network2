@@ -22,7 +22,6 @@ function toggleMenu() {
     });
 }
 
-toggleMenu()
 
 // showLink.forEach(link => link.addEventListener('click'), () => {
 //     showNav.classList.remove('.menu-appear')
@@ -69,17 +68,17 @@ const animateEnter = () => {
         stagger: 0.2
     });
 
-    // tl.from(['.certs'], {
-    //     opacity: 0,
-    //     stagger: 0.2,
-    //     delay: 0.7
-    // });
+    tl.from(['.certs'], {
+        opacity: 0,
+        stagger: 0.2,
+        delay: 0.7
+    });
 
-    // tl.from('.animate-in', {
-    //     opacity: 0,
-    //     x: 50,
-    //     stagger: 0.2
-    // })
+    tl.from('.animate-in', {
+        opacity: 0,
+        x: 50,
+        stagger: 0.2
+    })
 
     return tl
 }
@@ -95,9 +94,24 @@ function delay(n) {
 
 }
 
+barba.hooks.after((data) => {
+    // this hook will be called during every transitions
+    // before new page content enter…
+
+    function toggleMenu() {
+        icon.addEventListener('click', () => {
+            showNav.classList.toggle("menu-appear");
+        });
+    }
+
+
+    toggleMenu()
+});
+
 
 barba.init({
-
+    preventRunning: true,
+    prevent: ({ el }) => el.classList && el.classList.contains('prevent'),
     transitions: [{
         sync: true,
         async leave(data) {
@@ -107,12 +121,20 @@ barba.init({
             animateLeave();
             await delay(1200);
             done();
-            // location.reload()
+            console.log(location.href)
         },
         async enter(data) {
-            const done = this.async();
-            await animateEnter()
-            done();
+
+            animateEnter()
+
+        },
+        async after() {
+            function toggleMenu() {
+                icon.addEventListener('click', () => {
+                    showNav.classList.toggle("menu-appear");
+                });
+            }
+            toggleMenu()
         }
     }]
 });
