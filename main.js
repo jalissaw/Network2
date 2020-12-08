@@ -3,18 +3,9 @@
 const showNav = document.querySelector('.show-nav');
 const icon = document.querySelector('.fas');
 const showLink = document.querySelectorAll('.show-link a');
-var links = document.querySelectorAll('a[href]');
 
-var cbk = function (e) {
-    if (e.currentTarget.href === window.location.href) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-};
 
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', cbk);
-}
+
 
 function toggleMenu() {
     icon.addEventListener('click', () => {
@@ -96,9 +87,13 @@ function delay(n) {
 
 }
 
+barba.hooks.enter((data) => {
+    console.log(data.next.url);
+});
+
+
 barba.init({
     preventRunning: true,
-    prevent: ({ el }) => el.classList && el.classList.contains('prevent'),
     transitions: [{
         sync: true,
         async leave(data) {
@@ -113,7 +108,6 @@ barba.init({
         async enter(data) {
 
             animateEnter()
-
         }
     }]
 });
