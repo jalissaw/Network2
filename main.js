@@ -1,25 +1,14 @@
 // menu js
-
 const showNav = document.querySelector('.show-nav');
 const icon = document.querySelector('.fas');
 const showLink = document.querySelectorAll('.show-link a');
 
 
-
-
 function toggleMenu() {
-    icon.addEventListener('click', () => {
+    icon.addEventListener('click', (e) => {
         showNav.classList.toggle("menu-appear");
     });
 }
-toggleMenu()
-
-
-// showLink.forEach(link => link.addEventListener('click'), () => {
-//     if (showNav) {
-//         showNav.classList.remove('.menu-appear');
-//     }
-// });
 
 
 //gsap 
@@ -87,13 +76,32 @@ function delay(n) {
 
 }
 
-barba.hooks.enter((data) => {
-    console.log(data.next.url);
-});
+
+// barba.hooks.enter(() => {
+//     toggleMenu()
+//     console.log('enter')
+// });
 
 
 barba.init({
     preventRunning: true,
+    views: [{
+        namespace: 'home',
+        beforeEnter({ next }) {
+            // update the menu based on user navigation
+            function load_js() {
+                var head = document.getElementsByTagName('head')[0];
+                var script = document.createElement('script');
+                script.src = '/main.js';
+                head.appendChild(script);
+            }
+            load_js();
+        },
+        afterEnter() {
+            // refresh the parallax based on new page content
+            console.log('after')
+        }
+    }],
     transitions: [{
         sync: true,
         async leave(data) {
@@ -106,8 +114,7 @@ barba.init({
             console.log(location.href)
         },
         async enter(data) {
-
-            animateEnter()
+            animateEnter();
         }
     }]
 });
