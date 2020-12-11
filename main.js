@@ -4,13 +4,6 @@ const icon = document.querySelector('.fas');
 const showLink = document.querySelectorAll('.show-link a');
 
 
-function toggleMenu() {
-    icon.addEventListener('click', (e) => {
-        showNav.classList.toggle("menu-appear");
-    });
-}
-
-
 //gsap 
 
 const animateLeave = () => {
@@ -76,32 +69,23 @@ function delay(n) {
 
 }
 
+function toggleMenu() {
+    icon.addEventListener('click', (e) => {
+        showNav.classList.toggle("menu-appear");
+    });
+}
 
-// barba.hooks.enter(() => {
-//     toggleMenu()
-//     console.log('enter')
-// });
+barba.hooks.after(() => {
+    toggleMenu()
+    console.log('after')
+});
+
+toggleMenu()
+
 
 
 barba.init({
     preventRunning: true,
-    views: [{
-        namespace: 'home',
-        beforeEnter({ next }) {
-            // update the menu based on user navigation
-            function load_js() {
-                var head = document.getElementsByTagName('head')[0];
-                var script = document.createElement('script');
-                script.src = '/main.js';
-                head.appendChild(script);
-            }
-            load_js();
-        },
-        afterEnter() {
-            // refresh the parallax based on new page content
-            console.log('after')
-        }
-    }],
     transitions: [{
         sync: true,
         async leave(data) {
@@ -111,7 +95,6 @@ barba.init({
             animateLeave();
             await delay(1200);
             done();
-            console.log(location.href)
         },
         async enter(data) {
             animateEnter();
