@@ -70,12 +70,14 @@ function delay(n) {
 }
 
 function toggleMenu() {
+    console.log(showNav, icon)
     icon.addEventListener('click', (e) => {
         showNav.classList.toggle("menu-appear");
     });
 }
 
 barba.hooks.after(() => {
+    console.log(showNav, icon)
     toggleMenu()
     console.log('after')
 });
