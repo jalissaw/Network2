@@ -79,7 +79,7 @@ header .img-background-container {
   width: 50%;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 75px;
 }
 
 header .img-background-container .background {

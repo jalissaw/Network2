@@ -1,7 +1,7 @@
 // menu js
-const showNav = document.querySelector('.show-nav');
-const icon = document.querySelector('.fas');
-const showLink = document.querySelectorAll('.show-link a');
+// const showNav = document.querySelector('.show-nav');
+// const icon = document.querySelector('.fas');
+// const showLink = document.querySelectorAll('.show-link a');
 
 
 //gsap 
@@ -69,21 +69,25 @@ function delay(n) {
 
 }
 
+// function toggleMenu() {
+//     console.log(showNav, icon)
+//     icon.addEventListener('click', (e) => {
+//         showNav.classList.toggle("menu-appear");
+//     });
+// }
+
 function toggleMenu() {
-    console.log(showNav, icon)
-    icon.addEventListener('click', (e) => {
-        showNav.classList.toggle("menu-appear");
+    document.querySelector('.fas').addEventListener('click', (e) => {
+        document.querySelector('.show-nav').classList.toggle("menu-appear");
     });
 }
 
 barba.hooks.after(() => {
-    console.log(showNav, icon)
     toggleMenu()
     console.log('after')
 });
 
 toggleMenu()
-
 
 
 barba.init({
