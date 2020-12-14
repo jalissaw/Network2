@@ -1,7 +1,5 @@
-// menu js
-// const showNav = document.querySelector('.show-nav');
-// const icon = document.querySelector('.fas');
-// const showLink = document.querySelectorAll('.show-link a');
+
+
 
 
 //gsap 
@@ -68,14 +66,7 @@ function delay(n) {
     });
 
 }
-
-// function toggleMenu() {
-//     console.log(showNav, icon)
-//     icon.addEventListener('click', (e) => {
-//         showNav.classList.toggle("menu-appear");
-//     });
-// }
-
+// menu js
 function toggleMenu() {
     document.querySelector('.fas').addEventListener('click', (e) => {
         document.querySelector('.show-nav').classList.toggle("menu-appear");
@@ -84,7 +75,6 @@ function toggleMenu() {
 
 barba.hooks.after(() => {
     toggleMenu()
-    console.log('after')
 });
 
 toggleMenu()
