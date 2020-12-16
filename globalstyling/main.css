@@ -92,6 +92,13 @@
   z-index: 10;
 }
 
+@media (min-width: 0px) and (max-width: 480px) {
+  .nav .fas {
+    left: 25px;
+    top: 30px;
+  }
+}
+
 .nav .fas:hover {
   cursor: pointer;
   -webkit-transform: rotate(90deg);

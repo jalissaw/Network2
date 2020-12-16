@@ -26,11 +26,21 @@ header {
         flex: 1 1 600px;
         color: white;
 
+        @media #{$allphones} {
+            padding-left: 50px;
+        }
+
         .name {
             color: white;
             font-size: 4rem;
             font-weight: 600;
             text-shadow: grey 2px 2px 2px;
+            @media #{$allphones} {
+                font-size: 3rem;
+            }
+            @media #{$xsphones} {
+                font-size: 2.2rem;
+            }
         }
 
         .title {
@@ -39,6 +49,14 @@ header {
             font-weight: 400;
             padding-bottom: 15px;
             padding-left: 5px;
+
+            @media #{$allphones} {
+                font-size: 2.2rem;
+            }
+            @media #{$xsphones} {
+                font-size: 1.5rem;
+                padding-bottom: 5px;
+            }
         }
 
         .info-paragraph {
@@ -46,6 +64,14 @@ header {
             color: black;
             line-height: 25px;
             font-size: 1.1rem;
+            
+            @media #{$allphones} {
+                width: 80%;
+            }
+            @media #{$xsphones} {
+                font-size: 0.9rem;
+                line-height: 20px;
+            }
         }
     }
 
@@ -62,6 +88,10 @@ header {
             background-repeat: no-repeat;
             object-fit: cover;
             z-index: -1;
+
+            @media #{$allphones} {
+                right: 0;
+            }
         }
     }
 }

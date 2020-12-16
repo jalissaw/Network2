@@ -43,11 +43,29 @@ header .introduction {
   color: white;
 }
 
+@media (min-width: 0px) and (max-width: 480px) {
+  header .introduction {
+    padding-left: 50px;
+  }
+}
+
 header .introduction .name {
   color: white;
   font-size: 4rem;
   font-weight: 600;
   text-shadow: grey 2px 2px 2px;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  header .introduction .name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  header .introduction .name {
+    font-size: 2.2rem;
+  }
 }
 
 header .introduction .title {
@@ -58,11 +76,37 @@ header .introduction .title {
   padding-left: 5px;
 }
 
+@media (min-width: 0px) and (max-width: 480px) {
+  header .introduction .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  header .introduction .title {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+  }
+}
+
 header .introduction .info-paragraph {
   width: 65%;
   color: black;
   line-height: 25px;
   font-size: 1.1rem;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  header .introduction .info-paragraph {
+    width: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  header .introduction .info-paragraph {
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
 }
 
 header .img-background-container {
@@ -87,6 +131,12 @@ header .img-background-container .background {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  header .img-background-container .background {
+    right: 0;
+  }
 }
 
 .about-title {
