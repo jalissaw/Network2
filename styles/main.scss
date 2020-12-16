@@ -5,7 +5,6 @@ header {
     height: 100vh;
     width: 100%;
     position: relative;
-    overflow: hidden;
 
     .intro {
         display: flex;
@@ -221,7 +220,6 @@ header {
     .info-project {
         width:  60%;
         font-size: 1.3rem;
-        // color: $primary-color;
     }
 
 }
@@ -300,30 +298,60 @@ header {
     width: 100%;
     position: relative;
     flex-wrap: wrap;
+    padding-left: 100px;
+
+    @media #{$allphones} {
+        padding-left: 50px;
+    }
 
     .contact-introduction {
         display: flex;
         flex-direction: column;
         flex: 1 1 500px;
-        padding-left: 100px;
+        
+
+        @media #{$contactbreak} {
+            margin-top: 150px;
+        }
 
         .contact-title {
             color: white;
             font-size: 5.5rem;
             font-weight: 600;
             text-shadow: grey 2px 2px 2px;
+
+            @media #{$allphones} {
+                font-size: 3.2rem;
+            }
+            @media #{$xsphones} {
+                font-size: 2.2rem;
+            }
         }
 
         .contact-saying {
             font-size: 2.7rem;
             color: $primary-color;
             font-weight: 400;
+
+            @media #{$allphones} {
+                font-size: 1.7rem;
+            }
+            @media #{$xsphones} {
+                font-size: 1.5rem;
+                padding-bottom: 5px;
+            }
         }
 
         .contact-info {
             width: 80%;
             line-height: 25px;
             font-size: 1.1rem;
+
+            
+                @media #{$allphones} {
+                    width: 90%;
+                    font-size: 1rem;
+                }       
         }
 
         .fab {
@@ -340,9 +368,12 @@ header {
 
     .contact-form-container {
         display: flex;
-        justify-content: center;
         align-items: center;
         flex: 1 1 300px;
+        @media #{$contactbreak} {
+            padding-bottom: 50px;
+        }
+
 
         .form {
             display: flex;
@@ -350,12 +381,14 @@ header {
             justify-content: center;
             align-items: flex-start;
             margin-top: 50px;
+            width: 85%;
 
             .input {
-                width: 400px;
+                width: 100%;
                 height: 40px;
                 border: 1px solid $primary-color;
             }
+
 
             input[type='email'] {
                 margin: 12px 0px;
@@ -367,7 +400,7 @@ header {
             }
 
             .message {
-                width: 400px;
+                width: 100%;
                 height: 175px;
                 resize: vertical;
                 border: none;
