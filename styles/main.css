@@ -163,6 +163,7 @@ header .img-background-container .background {
   font-weight: 600;
   text-align: right;
   text-shadow: grey 2px 2px 2px;
+  padding-bottom: 10px;
 }
 
 .about-title .info-about {
@@ -319,6 +320,7 @@ header .img-background-container .background {
   font-weight: 600;
   text-align: right;
   text-shadow: grey 2px 2px 2px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 0px) and (max-width: 480px) {

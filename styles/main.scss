@@ -112,6 +112,7 @@ header {
         font-weight: 600;
         text-align: right;
         text-shadow: grey 2px 2px 2px;
+        padding-bottom: 10px;
     }
 
     .info-about {
@@ -220,6 +221,7 @@ header {
         font-weight: 600;
         text-align: right;
         text-shadow: grey 2px 2px 2px;
+        padding-bottom: 10px;
 
         @media #{$allphones} {
             font-size: 3.5rem;
