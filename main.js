@@ -73,11 +73,20 @@ function toggleMenu() {
     });
 }
 
+function removeMenu() {
+    document.querySelectorAll('.show-link a').forEach(link => link.addEventListener('click', () => {
+        document.querySelector('.show-nav').classList.remove("menu-appear");
+    }));
+}
+
+
 barba.hooks.after(() => {
-    toggleMenu()
+    toggleMenu();
+    removeMenu();
 });
 
-toggleMenu()
+toggleMenu();
+removeMenu();
 
 
 barba.init({
