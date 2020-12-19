@@ -157,6 +157,12 @@ header .img-background-container .background {
   padding-left: 100px;
 }
 
+@media (min-width: 0px) and (max-width: 480px) {
+  .about-title {
+    padding-left: 50px;
+  }
+}
+
 .about-title .about-heading {
   color: white;
   font-size: 4.5rem;
@@ -166,9 +172,28 @@ header .img-background-container .background {
   padding-bottom: 10px;
 }
 
+@media (min-width: 0px) and (max-width: 480px) {
+  .about-title .about-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .about-title .about-heading {
+    font-size: 2.2rem;
+  }
+}
+
 .about-title .info-about {
   width: 60%;
   font-size: 1.3rem;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .about-title .info-about {
+    width: 90%;
+    font-size: 1.2rem;
+  }
 }
 
 .introduction-about {
@@ -186,13 +211,17 @@ header .img-background-container .background {
   width: 100%;
 }
 
-.introduction-about .words {
+.introduction-about .certs:nth-child(2) {
+  margin-top: 15px;
+}
+
+.introduction-about .certifications {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 500px;
-          flex: 1 1 500px;
+      -ms-flex: 1 1 550px;
+          flex: 1 1 550px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -203,19 +232,37 @@ header .img-background-container .background {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   height: 500px;
   background: #4C49EC;
 }
 
-.introduction-about .words .word {
+@media (min-width: 0px) and (max-width: 480px) {
+  .introduction-about .certifications {
+    padding: 10px;
+  }
+}
+
+.introduction-about .certifications .certs-heading {
   font-size: 3rem;
   color: white;
   text-transform: uppercase;
   padding: 5px;
-  font-weight: 100;
+  font-weight: 600;
+  border-bottom: solid 1px black;
 }
 
-.introduction-about .words span {
+.introduction-about .certifications .certs {
+  padding: 5px;
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .introduction-about .certifications .certs {
+    font-size: 1.3rem;
+  }
+}
+
+.introduction-about .certifications span {
   border-bottom: 2px solid white;
 }
 
@@ -236,12 +283,10 @@ header .img-background-container .background {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 400px;
 }
 
 .introduction-about .education-container .education {
   height: 200px;
-  background: white;
   padding: 60px;
   margin-top: 15px;
 }
@@ -251,38 +296,6 @@ header .img-background-container .background {
   color: #4C49EC;
   border-bottom: 2px solid grey;
   margin-bottom: 5px;
-}
-
-.introduction-about .certifications-container {
-  padding-top: 50px;
-  width: 100%;
-}
-
-.introduction-about .certifications-container .certifications {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  padding-right: 100px;
-}
-
-.introduction-about .certifications-container .certs {
-  color: #4C49EC;
-  font-size: 2rem;
-  font-weight: 100;
 }
 
 .project-title {
