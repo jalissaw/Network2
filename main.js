@@ -1,7 +1,4 @@
 
-
-
-
 //gsap 
 
 const animateLeave = () => {
