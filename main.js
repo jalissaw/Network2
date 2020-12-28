@@ -75,6 +75,8 @@ function removeMenu() {
         document.querySelector('.show-nav').classList.remove("menu-appear");
     }));
 }
+
+
 // barba
 
 
