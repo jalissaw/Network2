@@ -79,7 +79,6 @@ function removeMenu() {
 
 // barba
 
-
 barba.hooks.after(() => {
     toggleMenu();
     removeMenu();
