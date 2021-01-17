@@ -53,6 +53,7 @@ const animateEnter = () => {
     return tl
 }
 
+
 function delay(n) {
     n = n || 2000;
 
@@ -63,6 +64,8 @@ function delay(n) {
     });
 
 }
+
+
 // menu js
 function toggleMenu() {
     document.querySelector('.fas').addEventListener('click', (e) => {
