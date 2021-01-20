@@ -1,6 +1,7 @@
 
 //gsap 
 
+
 const animateLeave = () => {
     const tl = gsap.timeline()
     tl.to('.load-page', {
