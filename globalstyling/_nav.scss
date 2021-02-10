@@ -69,6 +69,11 @@
         color: $primary-color;
         transition: ease 0.4s;
         z-index: 10;
+        display: none;
+        
+        @media #{$navgone} {
+            display: block;
+        }
 
         @media #{$allphones} {
             left: 25px;

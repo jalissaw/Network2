@@ -90,6 +90,13 @@
   -webkit-transition: ease 0.4s;
   transition: ease 0.4s;
   z-index: 10;
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .nav .fas {
+    display: block;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 480px) {
